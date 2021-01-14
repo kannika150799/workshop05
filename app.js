@@ -46,7 +46,7 @@ function editText(id_Edit) {
                     <input class="input-box edit-update" id="inputUpdate${id_Edit}" type='text' placeholder='New Text' />
                     <button class="button update-bt" onClick="updateText(${id_Edit})">Add</button> 
                    </div>
-                   <div id="errorEdit" class="errorMessage"></div>`;
+                   <div id="errorEdit${id_Edit}" class="errorMessage"></div>`;
   document.getElementById(id_Edit).innerHTML = inputEdit;
 }
 // Update Text
@@ -55,11 +55,11 @@ function updateText(id_update) {
   var textError2 = "You have not entered a message.";
 
   if (document.getElementById("inputUpdate" + id_update.toString()).value == "") {
-    document.getElementById("error").innerHTML = textError2;
+    document.getElementById("errorEdit"+ id_update.toString()).innerHTML = textError2;
     return false;
   } else {
     textError2 = "";
-    document.getElementById("error").innerHTML = textError2;
+    document.getElementById("errorEdit"+ id_update.toString()).innerHTML = textError2;
 
     var newText = document.getElementById("inputUpdate" + id_update.toString()).value;
     arrayText.splice(id_update, 1, newText);
