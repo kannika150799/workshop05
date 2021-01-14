@@ -44,7 +44,7 @@ function SubmitName() {
 function editText(id_Edit) {
   var inputEdit = `<div class="edit-box" id = "edit${id_Edit}">
                     <input class="input-box edit-update" id="inputUpdate${id_Edit}" type='text' placeholder='New Text' />
-                    <button class="button update-bt" onClick="updateText(${id_Edit})">Add</button> 
+                    <button class="button update-bt" onClick="updateText(${id_Edit})">Confirm</button> 
                    </div>
                    <div id="errorEdit${id_Edit}" class="errorMessage"></div>`;
   document.getElementById(id_Edit).innerHTML = inputEdit;
@@ -54,17 +54,17 @@ function updateText(id_update) {
 
   var textError2 = "You have not entered a message.";
 
-  if (document.getElementById("inputUpdate" + id_update.toString()).value == "") {
-    document.getElementById("errorEdit"+ id_update.toString()).innerHTML = textError2;
+  if (document.getElementById("inputUpdate" + id_update).value == "") {
+    document.getElementById("errorEdit"+ id_update).innerHTML = textError2;
     return false;
   } else {
     textError2 = "";
-    document.getElementById("errorEdit"+ id_update.toString()).innerHTML = textError2;
+    document.getElementById("errorEdit"+ id_update).innerHTML = textError2;
 
-    var newText = document.getElementById("inputUpdate" + id_update.toString()).value;
+    var newText = document.getElementById("inputUpdate" + id_update).value;
     arrayText.splice(id_update, 1, newText);
     console.log(arrayText);
-    document.getElementById("edit" + id_update.toString()).innerHTML = contannerUpdate(id_update);
+    document.getElementById("edit" + id_update).innerHTML = contannerUpdate(id_update);
   }
 }
 
