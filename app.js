@@ -29,7 +29,6 @@ function SubmitName() {
 
   if (document.getElementById("titleName").value == "") {
     document.getElementById("error").innerHTML = textError1;
-    return false;
   } else {
     textError1 = "";
     document.getElementById("error").innerHTML = textError1;
@@ -37,13 +36,14 @@ function SubmitName() {
     var input = document.getElementById("titleName").value;
     arrayText.push(input);
     document.getElementById("showOutput").innerHTML = contannerText();
+    document.getElementById("titleName").value = "";
   }
 }
 
 // Edit
 function editText(id_Edit) {
   var inputEdit = `<div class="edit-box" id = "edit${id_Edit}">
-                    <input class="input-box edit-update" id="inputUpdate${id_Edit}" type='text' placeholder='New Text' />
+                    <input class="input-box edit-update" id="inputUpdate${id_Edit}" type='text' value='${arrayText[id_Edit]}'/>
                     <button class="button update-bt" onClick="updateText(${id_Edit})">Confirm</button> 
                    </div>
                    <div id="errorEdit${id_Edit}" class="errorMessage"></div>`;
@@ -51,12 +51,10 @@ function editText(id_Edit) {
 }
 // Update Text
 function updateText(id_update) {
-
   var textError2 = "You have not entered a message.";
 
   if (document.getElementById("inputUpdate" + id_update).value == "") {
     document.getElementById("errorEdit"+ id_update).innerHTML = textError2;
-    return false;
   } else {
     textError2 = "";
     document.getElementById("errorEdit"+ id_update).innerHTML = textError2;
