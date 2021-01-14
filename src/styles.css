@@ -1,0 +1,91 @@
+@font-face {
+  font-family: Rubik;
+  src: url(../access/fonts/Rubik/Rubik-VariableFont_wght.ttf);
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.head {
+  margin-top: 30px;
+  font-family: Rubik;
+  font-size: 26px;
+}
+.contanner-from {margin-top: 30px;}
+.input-box {
+  font-family: Rubik;
+  font-size: 18px;
+  width: 200px;
+  height: 40px;
+  padding-left: 10px;
+  border-radius: 6px;
+  background-color: aliceblue;
+  border-color: transparent;
+  cursor: pointer;
+}
+.button {
+  font-family: Rubik;
+  align-self: center;
+  font-size: 18px;
+  color: aliceblue;
+  margin-right: 10px;
+  width: 70px;
+  height: 40px;
+  border-radius: 6px;
+  border-color: transparent;
+  background-color: steelblue;
+  cursor: pointer;
+}
+.button:hover {background-color: rgb(144, 194, 235);}
+.edit-bt {background-color: rgb(45, 209, 146);}
+.edit-bt:hover {background-color: rgb(161, 236, 208);}
+.delete-bt {background-color: rgb(255, 0, 0);}
+.delete-bt:hover {background-color: rgb(240, 167, 167);}
+.update-bt {background-color: rgb(151, 119, 241);}
+.update-bt:hover {background-color: rgb(204, 189, 245);}
+
+/* input  */
+.errorMessage {
+  align-self: center;
+  font-family: Rubik;
+  color: red;
+  font-size: 16px;
+}
+.contanner-Output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.boxText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 57px;
+  margin-bottom: 5px;
+}
+.show-text {
+  margin: 0px 9px 0px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 200px;
+  font-family: Rubik;
+  text-align: left;
+  font-size: 18px;
+  border-radius: 8px;
+  background-color: aliceblue;
+}
+.edit-box {
+  height: 57px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+}
+.edit-update {
+  align-self: center;
+  margin-right: 5px;
+}
